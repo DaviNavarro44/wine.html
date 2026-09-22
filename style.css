@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #1b0d11;
+    color: #e8ddd2;
+}
+
+/* PÁGINA */
+
+.pagina {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    border-bottom: 1px solid #4a2a30;
+}
+
+/* LADO ESQUERDO */
+
+.bloco-esquerdo {
+    width: 40%;
+    background-color: #32151d;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #f5eadc;
+    border-right: 1px solid #76533a;
+}
+
+/* LADO ESQUERDO COM FOTO - PÁGINA 3 */
+
+.bloco-esquerdo-vazio {
+    width: 40%;
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid #76533a;
+}
+
+/* LADO DIREITO */
+
+.bloco-direito {
+    width: 60%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b0d11;
+}
+
+/* TÍTULOS */
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #e8c98f;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #e8c98f;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #c69b5c;
+}
+
+/* SUBTÍTULO */
+
+.subtitulo {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    color: #d7c4b5;
+}
+
+/* TEXTOS */
+
+.bloco-direito p {
+    max-width: 650px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #d8cbc1;
+}
+
+.texto-topo {
+    margin-bottom: 35px;
+}
+
+.bloco-direito strong {
+    color: #e1bd76;
+}
+
+/* IMAGENS */
+
+.bloco-direito img {
+    width: 80%;
+    max-width: 650px;
+    height: 70vh;
+    object-fit: cover;
+    border: 1px solid #76533a;
+}
+
+/* IMAGEM DA CAPA */
+
+.pagina-capa .bloco-direito img {
+    height: 80vh;
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.navegacao a {
+    color: #d6ad68;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #d6ad68;
+    padding-bottom: 5px;
+}
+
+/* TIPOS DE VINHO */
+
+.grade-icones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 25px;
+}
+
+.item-icone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    border: 1px solid #4f3036;
+    background-color: #251116;
+    color: #e3d4c8;
+}
+
+.icone {
+    font-size: 1.8rem;
+}
+
+/* CELULAR / TELA PEQUENA */
+
+@media (max-width: 800px) {
+
+    .pagina {
+        flex-direction: column;
+    }
+
+    .bloco-esquerdo,
+    .bloco-esquerdo-vazio,
+    .bloco-direito {
+        width: 100%;
+    }
+
+    .bloco-esquerdo {
+        padding: 40px;
+        min-height: 45vh;
+    }
+
+    .bloco-esquerdo-vazio {
+        min-height: 50vh;
+        height: 50vh;
+    }
+
+    .bloco-direito {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .bloco-direito img {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .grade-icones {
+        grid-template-columns: 1fr;
+    }
+}
